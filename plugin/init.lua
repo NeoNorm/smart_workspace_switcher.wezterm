@@ -29,7 +29,7 @@ local pub = {
 ---@param cmd string
 ---@return string
 local run_child_process = function(cmd)
-	local process_args = { os.getenv("SHELL"), "-c", cmd }
+	local process_args = { os.getenv("SHELL"), "-cl", cmd }
 	if is_windows then
 		process_args = { "cmd", "/c", cmd }
 	end
